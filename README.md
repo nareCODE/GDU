@@ -1,2 +1,0 @@
-# GDU
-Formations Projects
