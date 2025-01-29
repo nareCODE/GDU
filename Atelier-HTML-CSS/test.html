@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu avec Logo et Liens</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <!-- Logo de la marque -->
+            <div class="logo"><a href="#">Agenc<span><i>eco</i></span></div>
+            <!-- Barre de navigation responsive si sm media size -->
+            <div class="menu" id="menu">
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="team.html">Notre equipe</a></li>
+                    <li><a href="services.html">Nos services</a></li>
+                    <li><a href="temoignages.html">Témoignages</a></li>
+                    <li><a href="contact.html">Contactez-nous</a></li>
+                    <li><a href="gallery.html">Notre galerie</a></li>
+                </ul>
+            </div>
+            <div class="burger" id="burger"> <!-- Menu responsive pour les sm size medias -->
+                <i class="fas fa-home" style="font-size: 24px; color: white;"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="image-box">
+            <div class="image-box-content">
+                <h2>Mon titre</h2>
+                <p>Un court texte descriptif.</p>
+            </div>
+        </div>
+    </main>
+    <script>
+        // Selection des éléments HTML à manipuler
+        const burger = document.getElementById('burger');
+        const menu = document.getElementById('menu');
+
+        // Ajoute la possibilité de clicker sur le menu burger 
+        burger.addEventListener('click', function() {
+            // Change les propiétés CSS du menu pour le rendre visible  
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
