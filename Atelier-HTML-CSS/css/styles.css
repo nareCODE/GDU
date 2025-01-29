@@ -1,0 +1,123 @@
+/* Réinitialiser les marges et les paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Style de base pour l'en-tête */
+header {
+    background-color: #333;
+    position: sticky;
+    color: #fff;
+    padding: 15px;
+}
+
+/* La barre de navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Logo à gauche, liens à droite */
+    align-items: center;
+}
+
+/* Style du logo */
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 
+        1px 1px 0px black,  
+        4px 4px 0px #333;
+}
+
+.logo a {
+    text-decoration: none;
+    color: green;
+}
+
+.logo span {
+    color: aliceblue;
+}
+
+/* Style du menu */
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+/* Espacement des liens du menu */
+.menu ul li {
+    margin-left: 20px;
+}
+
+/* Style des liens */
+.menu ul li a {
+    text-decoration: none;
+    color:aliceblue;
+    font-size: 16px;
+    text-shadow: 
+    1px 1px 0px black,  
+    4px 4px 0px #333;
+}
+
+.menu ul li a:hover {
+    border-bottom: aliceblue 1px solid;
+}
+
+/* Style du menu burger (caché par défaut) */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+/* Responsive - menu burger s'affiche en dessous de 768px */
+@media (max-width: 768px) {
+/* Cacher le menu normal */
+    .menu {
+        display: none;
+    }
+/* Afficher le burger */
+    .burger {
+        display: flex;
+    }
+
+/* Menu en sm media size */
+    .menu.active {
+        display: block;
+        position: absolute;
+        top: 56px;
+        right: 0;
+        background-color: #333;
+        width: 20%;
+        text-align: right;
+        border: 1px solid green;
+        border-radius: 5px;
+        box-shadow: black 1 1 2px;    
+    }
+
+/* Le menu s'affiche verticalement */
+    .menu.active ul {
+        flex-direction: column;
+        margin-right: 20px;
+    }
+
+    .menu.active ul li {
+        margin: 15px 0;
+        margin-left: 1em;
+    }
+}
+
+/* Conteneur de la boîte */
+.image-box {
+    position: relative;
+    width: 100%; /* Ajustez la largeur selon vos besoins */
+    height: 600px; /* Ajustez la hauteur selon vos besoins */
+    background-image: url('../images/rodion-kutsaev-049M_crau5k-unsplash\ 1.jpg'); /* Chemin vers votre image */
+    background-size: cover; /* Redimensionne l'image pour couvrir toute la boîte */
+    background-position: center; /* Centre l'image */
+    overflow: hidden; /* Cache tout ce qui dépasse */
+}
