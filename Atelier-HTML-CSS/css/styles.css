@@ -7,14 +7,24 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    z-index: 999;
+}
+
+/* Style de base pour l'en-tête !import z-index pour menu */
+header {
+    z-index: 10;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    color: #fff;
+    padding: 15px;
+    border-bottom: 1px solid black;
 }
 
 /* Style de base pour l'en-tête */
-header {
-    background-color: #333;
-    position: sticky;
-    color: #fff;
-    padding: 15px;
+
+header, .image-box, body, html {
+    overflow: visible !important;
 }
 
 /* La barre de navigation */
@@ -28,14 +38,15 @@ header {
 .logo {
     font-size: 2em;
     font-weight: bold;
-    text-shadow: 
-        1px 1px 0px black,  
-        4px 4px 0px #333;
+    background: -webkit-linear-gradient(green, #55ea8b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .logo a {
     text-decoration: none;
     color: green;
+    margin: 20px;
 }
 
 .logo span {
@@ -56,25 +67,27 @@ header {
 /* Style des liens */
 .menu ul li a {
     text-decoration: none;
-    color:aliceblue;
+    background: -webkit-linear-gradient(green, #55ea8b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 16px;
-    text-shadow: 
-    1px 1px 0px black,  
-    4px 4px 0px #333;
+
 }
 
 .menu ul li a:hover {
-    border-bottom: aliceblue 1px solid;
+    border-bottom: #4cb873 2px solid;
+    border-radius: 2px;
+    padding-bottom: 10px;
 }
 
-/* Style du menu burger (caché par défaut) */
+/* Style du menu burger (non visible by default) */
 .burger {
     display: none;
     flex-direction: column;
     cursor: pointer;
 }
 
-/* Responsive - menu burger s'affiche en dessous de 768px */
+/* Le menu burger s'affiche en dessous de 768px */
 @media (max-width: 768px) {
 /* Cacher le menu normal */
     .menu {
@@ -85,14 +98,16 @@ header {
         display: flex;
     }
 
-/* Menu en sm media size */
+/* Menu en sm media size !important z-index pour le menu */
     .menu.active {
+        z-index: 1000;
         display: block;
         position: absolute;
         top: 56px;
         right: 0;
-        background-color: #333;
-        width: 20%;
+        background-color: white;
+        width: auto;
+        min-width: 150px; 
         text-align: right;
         border: 1px solid green;
         border-radius: 5px;
@@ -111,13 +126,41 @@ header {
     }
 }
 
-/* Conteneur de la boîte */
+/* Conteneur de la box */
 .image-box {
+    display: flex;
     position: relative;
-    width: 100%; /* Ajustez la largeur selon vos besoins */
-    height: 600px; /* Ajustez la hauteur selon vos besoins */
-    background-image: url('../images/rodion-kutsaev-049M_crau5k-unsplash\ 1.jpg'); /* Chemin vers votre image */
-    background-size: cover; /* Redimensionne l'image pour couvrir toute la boîte */
-    background-position: center; /* Centre l'image */
-    overflow: hidden; /* Cache tout ce qui dépasse */
+    width: 100%; 
+    height: 40em; 
+    background-image: url('../images/banner1.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: visible;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+}
+
+/* Content de la box */
+.image-box-content {
+
+    text-align: right;
+    padding: 20px;
+    margin-right: 30px;
+    color: aqua;
+}
+/* Modification du h2 dans la box */
+.image-box-content h2 {
+    font-size: 3em;
+    color: aliceblue;
+    
+}
+/* Modification du p dans la box */
+.image-box-content p {
+    font-size: 4em;
+    font-weight: bold;
+    background: -webkit-linear-gradient(aliceblue, #f5f76f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
