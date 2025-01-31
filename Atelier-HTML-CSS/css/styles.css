@@ -580,6 +580,133 @@ header, .image-box, body, html {
     transform: scale(1.1);
 }
 
+/* Conteneur principal du footer */
+.pre-footer {
+    width: 100%;
+    background-color: #55ea8b;
+    color: white;
+    padding: 20px 0;
+    margin-top: 30px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;   
+}
+  
+
+  .pre-footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-shadow: 1px 0px 0px #333;
+  }
+  
+  .pre-footer-section p {
+    font-size: 0.9em;
+    margin: 5px 0;
+  }
+  
+  .pre-footer-section a {
+    font-size: 0.9em;
+    margin: 5px 0;
+    text-decoration: none;
+    display: flex;
+    color: aliceblue;
+  }
+
+  .pre-footer-section a:hover {
+    color: grey;
+    font-weight: 500;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+  
+.pre-footer-section, .pre-footer-contact {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+}
+
+  .icon {
+    font-size: 1.5em;
+    color: #C8FF57;
+    margin-right: 10px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.5;
+}
+.pre-footer-section, 
+.pre-footer-contact {
+    flex: 1 0 20%;
+    text-align: left;
+    font-size: 1.2em;
+    width: 100%;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Texte du copyright */
+.footer-text {
+    font-size: 1em;
+    margin: 0;
+    font-weight: 300;
+}
+
+/* Section des icônes sociales */
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: white;
+    color: #333;
+}
 
   @media (max-width: 768px) {
 
