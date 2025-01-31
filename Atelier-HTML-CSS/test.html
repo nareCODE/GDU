@@ -19,19 +19,21 @@
                 <ul>
                     <li><a href="#">Accueil</a></li>
                     <li><a href="team.html">Notre equipe</a></li>
-                    <li><a href="services.htle">Nos services</a></li>
-                    <li><a href="temoignagescycle">Témoignages</a></li>
-                    <li><a href="contact.htme">Contactez-nous</a></li>
-                    <li><a href="gallery.htme">Notre galerie</a></li>
+                    <li><a href="nosservices.htlm">Nos services</a></li>
+                    <li><a href="temoignagescycle.html">Témoignages</a></li>
+                    <li><a href="contact.html">Contactez-nous</a></li>
+                    <li><a href="gallery.html">Notre galerie</a></li>
                 </ul>
             </div>
             <div class="burger" id="burger"> <!-- Menu responsive pour les sm size medias -->
-                <i class="fas fa-home" style="font-size: 20px; color: green;"></i>
+                <i class="fas fa-home" style="font-size: 20px; color: #55ea8b;"></i>
             </div>
         </nav>
     </header>
     <main>
         <div class="image-box">
+            </button>
+            <button class="gotothetop" style="background-image: url('images/top.png'); width: 50px; height: 50px; border: none; background-size: cover;" onclick="remonterHaut()"></button>
             <div class="image-box-content">
                 <h2>Bienvenue dans votre</h2>
                 <p>Agence Web écologique</p>
@@ -58,7 +60,7 @@
                     <h3>Jack Doe<span class="badge3">Dev OPS</span></h3>
                     <p>MarketinDeveloppeur Full Stack depuis 6 ans, il nous fait part de toute sa connaissance et nous bénis par ses skills en Javascript et ses framework!</p>
                 </div>
-        </div>
+            </div>
         </div>
         <div class="utiles-stats">
 
@@ -86,8 +88,88 @@
                 <p>Application React créées</p>
 
             </div>
-    </main>
+            </div>
+            <div class="nos-services">
+                <div class="nos-services-title">
+                    <h1>Nos services</h1>
+                </div>
+                <div class="nos-services-services">
+                    <div class="creasiteweb">
+                        <a class="crea" href="nosservices.html">
+                        <img src="images/creasiteweb.jpg" alt="Services de l'entreprise">
+                        </a>
+                        <h1>Création de sites web</h1>
+                    </div>
+                    <div class="auditqualite">
+                        <a href="nosservices.html">
+                        <img src="images/auditqualite.jpg" alt="Services de l'entreprise">
+                        </a>
+                        <h1>Audit qualité</h1>
+                    </div>
+            </div>
+        </div>
+        <div class="formulaire-container">
+    <h1 class="formulaire-title">Contactez-nous</h1>
+    <p class="formulaire-subtitle">Pour toute demande de devis, d'information ou de partenariat</br> Veuillez nous laisser un message et nous ne manquerons pas de vous recontacter !</p>
+    <form class="contact-formulaire">
+      <div class="formulaire-row">
+        <input type="text" name="nom-prenom" placeholder="Nom et Prenom" required>
+        <input type="text" name="categorie" placeholder="Catégorie" required>
+      </div>
+      <div class="formulaire-row">
+        <input type="tel" name="telephone" placeholder="Téléphone" required>
+        <input type="text" name="ville" placeholder="Ville" required>
+      </div>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Message" rows="4" required></textarea>
+      <div class="button-container">
+      <button type="submit" class="submit-button">Envoyer</button>
+      </div>
+    </form>
+  </div>
+<div class="apropos-de-nous">
+    <div class="photo-apropos">
+        <img src="images/apropos.jpg" alt="A propos de nous">
+    </div>
+    <div class="card-apropos">
+        <h1>A propos de nous</h1>
+        <p>Agence Web écologique est une entreprise qui se soucie de l'environnement et de la qualité de ses services.
+        <div class="card-apropos-spe">
+            <div class="icon-apropoos1">
+            <img src="images/apropos1.jpg" alt="A propos de nous">
+            <h3>Ecologique</h3>
+            </div>
+        <div class="icon-apropos2">
+            <img src="images/apropos2.jpg" alt="Membre de l'équipe">
+            <h3>Responsable</h3>
+        </div>
+        <div class="icon-apropos3">
+            <img src="images/apropos3.jpg" alt="Membre de l'équipe">
+            <h3>24/7 Assistance</h3>
+        </div>
+    </div>
+</div>
+</div>
+    <div class="notre-galerie">
+        <div class="notre-galerie-title">
+            <h1>Notre galerie</h1>
+        <p>Voici ici plusieurs de nos créations web et applications faites ses 6 derniers mois</p>
+        </div>
+        <div class="notre-galerie-images">
+            <img src="images/apropos.jpg" alt="Photos 1">
+            <img src="images/banner1.jpg" alt="Photos 2">
+            <img src="images/galerie.jpg" alt="Photos 3">
+        </div>
+        <div class="navigation-buttons"> <!-- Une division pour contenir les boutons sous l'image -->
+            <button class="prev-btn">&lt;</button> <!-- Flèche gauche -->
+            <button class="next-btn">&gt;</button> <!-- Flèche droite -->
+        </div>
+</div>
+</main>
     <script>
+        function remonterHaut() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
         // Selection des éléments HTML à manipuler
         const burger = document.getElementById('burger');
         const menu = document.getElementById('menu');
@@ -98,5 +180,38 @@
             menu.classList.toggle('active');
         });
     </script>
+    <script>
+// Sélectionne toutes les images
+const images = document.querySelectorAll('.notre-galerie-images img'); 
+const prevButton = document.querySelector('.prev-btn'); // Bouton Précédent
+const nextButton = document.querySelector('.next-btn'); // Bouton Suivant
+
+let currentIndex = 0; // L'indice de l'image actuellement visible
+
+// Fonction pour mettre à jour l'image visible
+function updateImage() {
+    images.forEach((img, index) => {
+        img.classList.remove('active'); // Retirer la classe "active" de toutes les images
+        if (index === currentIndex) {
+            img.classList.add('active'); // Ajouter la classe "active" uniquement à l'image actuelle
+        }
+    });
+}
+
+// Au clic sur "Précédent"
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1; // Revenir à la dernière si on dépasse le début
+    updateImage(); // Mettre à jour l'affichage
+});
+
+// Au clic sur "Suivant"
+nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0; // Aller à la première si on dépasse la fin
+    updateImage(); // Mettre à jour l'affichage
+});
+
+// Initialiser la galerie : afficher uniquement la première image
+updateImage();
+</script>
 </body>
 </html>
