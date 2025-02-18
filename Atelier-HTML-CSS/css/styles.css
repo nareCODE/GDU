@@ -59,7 +59,7 @@ header, .image-box, body, html {
 .logo {
     font-size: 2em;
     font-weight: bold;
-    color: #55ea8b;
+    color: #204A4C;
 }
 
 .logo a {
@@ -69,7 +69,7 @@ header, .image-box, body, html {
 }
 
 .logo span {
-    color: #55ea8b;;
+    color: #204A4C;
 }
 
 /* Style du menu */
@@ -88,7 +88,7 @@ header, .image-box, body, html {
 /* Style des liens */
 .menu ul li a {
     text-decoration: none;
-    color: #55ea8b;
+    color: #204A4C;
     font-size: 1.2em;
     font-weight: 600;
     margin-right: 20px;
@@ -183,7 +183,7 @@ header, .image-box, body, html {
     font-size: 3.5em;
     margin-top: 10px;
     font-weight: bold;
-    color:#55ea8b
+    color: #204A4C;
 }
 
 /* Phrase de la div equipe */
@@ -240,7 +240,7 @@ header, .image-box, body, html {
     padding: 2px;
     left: 10px;
     bottom: 10px;
-    background-color: #55ea8b;
+    background-color: #204A4C;
     color: white;
     font-size: 12px;
     padding: 3px 8px;
@@ -282,7 +282,7 @@ header, .image-box, body, html {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    background-color: #55ea8b;
+    background-color: #204A4C;
     color: aliceblue;
     text-align: center;
 }
@@ -317,7 +317,7 @@ header, .image-box, body, html {
     font-size: 2.2em;
     margin-top: 40px;
     font-weight: bold;
-    color:#55ea8b
+    color: #204A4C;
 }
 
 /* Style de la div services */
@@ -339,7 +339,7 @@ header, .image-box, body, html {
 }
 
 .formulaire-container {
-    background-color: #55ea8b;
+    background-color: #204A4C;
   }
   
   .formulaire-title {
@@ -451,7 +451,7 @@ header, .image-box, body, html {
     padding: 10px;
     margin-left: 20px;
     text-align: center;
-    border: 2px solid #55ea8b;
+    border: 2px solid #204A4C;
     border-radius: 2%;
     box-sizing: border-box;
     justify-content: space-evenly;
@@ -461,7 +461,7 @@ header, .image-box, body, html {
     font-size: 2.5em;
     padding: 20px;
     font-weight: bold;
-    color:#55ea8b
+    color: #204A4C;
 }
 
 .card-apropos p {
@@ -477,7 +477,7 @@ header, .image-box, body, html {
     width: 50px;
     height: 50px;
     padding: 20px;
-    border: 4px solid #55ea8b;
+    border: 4px solid #204A4C;
 }
 
 .card-apropos-spe {
@@ -499,7 +499,7 @@ header, .image-box, body, html {
     font-size: 3em;
     margin-top: 40px;
     font-weight: bold;
-    color: #55ea8b;
+    color: #204A4C;
 }
 
 .notre-galerie-title p {
@@ -546,7 +546,7 @@ header, .image-box, body, html {
 
 .prev-btn,
 .next-btn {
-    background-color: #55ea8b;
+    background-color: #204A4C;
     border: none;
     color: white;
     font-size: 2em;
@@ -577,7 +577,7 @@ header, .image-box, body, html {
 /* Conteneur principal du footer */
 .pre-footer {
     width: 100%;
-    background-color: #55ea8b;
+    background-color: #204A4C;
     color: white;
     padding: 20px 0;
     margin-top: 30px;
@@ -726,7 +726,7 @@ header, .image-box, body, html {
         width: auto;
         min-width: 150px; 
         text-align: right;
-        border: 1px solid green;
+        border: 1px solid #204A4C;
         border-radius: 5px;
         box-shadow: black 1 1 2px;    
     }
